@@ -9,7 +9,20 @@ class CreateScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Todo 작성'),
       ),
-      body: TextField(),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: TextField(
+          decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            hintStyle: TextStyle(color: Colors.grey[800]),
+            hintText: '할 일을 입력하세요.',
+            filled: true,
+            fillColor: Colors.white70,
+          ),
+        ),
+      ),
     );
   }
 }
